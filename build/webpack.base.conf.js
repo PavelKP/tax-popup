@@ -24,7 +24,7 @@ module.exports = {
   },
   module: {
     rules: [{
-      test: /\.js$/,
+      test: /\.(js|jsx)$/,
       loader: 'babel-loader',
       exclude: '/node_modules/'
     },
@@ -110,5 +110,8 @@ module.exports = {
       template: `${Path.SRC}/index.html`,
       filename: './index.html'
     }),
-  ]
+  ],
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
 }
